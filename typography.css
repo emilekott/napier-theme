@@ -20,165 +20,169 @@ http://24ways.org/2006/compose-to-a-vertical-rhythm */
 
 
 body {
-		font-size: 62.5%; /* Resets 1em to 10px */
-		font-family: Helvetica Neue, Arial, Helvetica, sans-serif;
-		text-align: left;
-		}
+    font-size: 62.5%; /* Resets 1em to 10px */
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    text-align: left;
+}
+#tag-line #site-description{
+    font-size: 2.7em;
+    font-weight: bold;
+}
 
-#headerimg .description {
-		font-size: 1.2em;
-		text-align: left;
-		}
 
+#tag-line #telephone{
+    font-size: 2.1em;
+    font-weight: bold;
+}
 h1, h1 a, h1 a:hover, h1 a:visited, #headerimg .description {
-		text-decoration: none;
-		}
+    text-decoration: none;
+}
 
 h2, h2 a, h2 a:hover, h2 a:visited, h3, h3 a, h3 a:hover, h3 a:visited, #sidebar h2, #wp-calendar caption, cite {
-		text-decoration: none;
-		}
+    text-decoration: none;
+}
 
 h1 {
-		font-size: 2.2em;
-		line-height: 0.818182em;
-		margin-top: 0em;
-		margin-bottom: 0.818182em;
-		text-transform: capitalize;
-		}
+    font-size: 2.2em;
+    line-height: 0.818182em;
+    margin-top: 0em;
+    margin-bottom: 0.818182em;
+    text-transform: capitalize;
+}
 
 h2 {
-		font-size: 1.8em;
-		line-height: 1em;
-		margin-top: 0.5em;
-		margin-bottom: 1.5em;
+    font-size: 1.8em;
+    line-height: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
 }
 
 #header h2 {
-		margin-bottom: 0em;
-		line-height: 0em;
-		}
+    margin-bottom: 0em;
+    line-height: 0em;
+}
 
 h3 {
-		font-size: 1.6em;
-		line-height: 1.125em;
-		margin-top: 0.5em;
-		margin-bottom: 1.5em;
-		}
+    font-size: 1.6em;
+    line-height: 1.125em;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+}
 
 #sidebar h3 {
-		font-size: 1.2em;
-		line-height: 1.2em;
-		margin-top: 1.2em;
-		margin-bottom: 0em;
-		}
+    font-size: 1.2em;
+    line-height: 1.2em;
+    margin-top: 1.2em;
+    margin-bottom: 0em;
+}
 
 p {
-		font-size: 1.5em;
-		line-height: 1.2em;
-		margin-top: 1.2em;
-		margin-bottom: 1.2em;
-		text-align: left
-		}
+    font-size: 1.5em;
+    line-height: 1.2em;
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+    text-align: left
+}
 
 a {
-		text-decoration: none;
-		}
+    text-decoration: none;
+}
 
 a:hover {
-		text-decoration: underline;
-		}
+    text-decoration: underline;
+}
 
 code {
-		font: 1.1em 'Courier New', Courier, Fixed;
-		}
+    font: 1.1em 'Courier New', Courier, Fixed;
+}
 
 acronym, abbr, span.caps
 {
-		font-size: 0.9em;
-		letter-spacing: .07em;
-		}
+    font-size: 0.9em;
+    letter-spacing: .07em;
+}
 
 small {
-		font-size: 1em;
-		line-height: 1.8em;
-		margin-top: 1.8em;
-		margin-bottom: 1.8em;
-		}
+    font-size: 1em;
+    line-height: 1.8em;
+    margin-top: 1.8em;
+    margin-bottom: 1.8em;
+}
 
 .postmetadata {
-		text-align: left;
-		}
+    text-align: left;
+}
 
 .smallattachment {
-		text-align: center;
-		}
+    text-align: center;
+}
 
 .attachment {
-		text-align: center;
-		}
+    text-align: center;
+}
 
 .navigationTop, .navigationBottom {
-		font-size: 1.5em;
-		line-height: 1.2em;
-		margin-top: 1.2em;
-		margin-bottom: 1.2em;
-		text-align: left
-		}
+    font-size: 1.5em;
+    line-height: 1.2em;
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+    text-align: left
+}
 
 #sidebar ul ul {
-		font-size: 1.2em;
-		line-height: 1.5em;
-		margin-top: 0.9em;
-		margin-bottom: 0em;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin-top: 0.9em;
+    margin-bottom: 0em;
 }
 
 .commentlist li, #commentform input, #commentform textarea {
-		font-size: 0.9em;
-		}
-		
+    font-size: 0.9em;
+}
+
 .commentlist li ul li {
-		font-size: 1em;
-		}
+    font-size: 1em;
+}
 
 .commentlist li {
-		font-weight: bold;
-		}
+    font-weight: bold;
+}
 
 .commentlist cite, .commentlist cite a {
-		font-weight: bold;
-		font-style: normal;
-		font-size: 1.1em;
-		}
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.1em;
+}
 
 .commentlist p {
-		font-weight: normal;
-		line-height: 1.5em;
-		text-transform: none;
-		}
+    font-weight: normal;
+    line-height: 1.5em;
+    text-transform: none;
+}
 
 .commentmetadata {
-		font-weight: normal;
-		}
+    font-weight: normal;
+}
 
 #wp-calendar #prev a, #wp-calendar #next a {
-		font-size: 9pt;
-		}
+    font-size: 9pt;
+}
 
 #wp-calendar a {
-		text-decoration: none;
-		}
+    text-decoration: none;
+}
 
 #wp-calendar caption {
-		font: bold 1.3em;
-		text-align: center;
-		}
+    font: bold 1.3em;
+    text-align: center;
+}
 
 #wp-calendar th {
-		font-style: normal;
-		text-transform: capitalize;
-		}
+    font-style: normal;
+    text-transform: capitalize;
+}
 
 .wp-caption p.wp-caption-text {
-		font-size: 11px;
-		line-height: 17px;
-		}
+    font-size: 11px;
+    line-height: 17px;
+}

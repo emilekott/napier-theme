@@ -59,16 +59,17 @@
 	<div id="header">
 		
 		
-		<div class="container_12">
+		<div id="masthead" class="container_12">
 		
-			<!-- The class "grid_12" restricts the div to 12 columns wide -->
-			<div id="headerimg" class="grid_12">
-				<h2><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h2>
-				<p class="description">
-					<?php bloginfo('description'); ?>
-				</p>
-				
-			</div><!-- end headerimg -->
+			<div id="branding" class="grid_3 suffix_2">
+                            <div id="logo"><a href="<?php echo get_option('home'); ?>/"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png" alt="Napier - B2b Technology PR and Marketing" /></a></div>				
+			</div><!-- end branding -->
+                        <div class="grid_7">
+                            <div id="tag-line">
+                                <div id="site-description"><?php bloginfo('description'); ?></div>
+                                <div id="telephone">0207 078 0849</div>
+                            </div>
+                        </div>
 			
 			<!-- skip to content and menu links - these are hidden with screen reader friendly css for accessibility -->
 			<div id="skip">
@@ -76,8 +77,13 @@
 			<p></p><a href="#main-menu" title="skip to main menu">skip to main menu</a></p>
 			</div><!-- end skip -->
 			
-			<!-- This clears all floats -->
-			<div class="clear">&nbsp;</div>
+                        <div class="grid_12">
+                            <div id ="nav">
+                                
+                            </div>
+                        </div>
+
+			<div class="clear"></div>
 		
 		</div><!-- end headerContainer -->
 		
