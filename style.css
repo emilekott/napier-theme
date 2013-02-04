@@ -36,7 +36,7 @@ body {
 }
 
 #masthead {
-    padding: 40px 0 35px 0;
+    padding: 40px 0 0 0;
 }
 
 #logo{
@@ -46,7 +46,7 @@ body {
 #tag-line{
     text-align:right;
     padding: 0 20px 0 0;
-    
+
 }
 
 #site-description{
@@ -63,14 +63,144 @@ body {
     overflow: hidden;
 }
 
+
+
+
+/*nav layout */
+
+
+#nav {
+    width: 938px;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    height: 28px;
+    font-size: 12px;
+    margin: 35px auto 0px;
+    padding: 0px;
+    background: #EBECEC;
+    font-weight: normal;
+    -webkit-box-shadow: 0px 3px 0px 1px #EBECEC;
+    -moz-box-shadow: 0px 3px 0px 1px #EBECEC;
+    box-shadow: 0px 3px 0px 1px #EBECEC;
+}
+
+ul#menu-main-menu {
+    margin: 0px;
+    padding: 0px;
+    float: left;
+    list-style: none;
+}
+
+ul#menu-main-menu li {
+    float: left;
+    list-style: none;
+    line-height: 15px;	
+    margin: 0px;
+    padding: 0px;
+    background: none;
+
+}
+
+ul#menu-main-menu li a, ul#menu-main-menu li a:link, ul#menu-main-menuli a:visited {
+    display: block;
+    border-right: 1px solid #000;
+    margin: 0px;
+    padding: 5px 8px 8px 8px;
+    width: 87px;
+    text-align: center;
+    text-decoration: none;
+}
+ul#menu-main-menu li.last-menu-item a{
+    border: none;
+    width: 90px;
+}
+
+
+ul#menu-main-menu li ul {
+    z-index: 9999;
+    position: absolute;
+    left: -999em;
+    height: auto;
+    width: 160px;
+    margin: 0 0 0 -1px;
+    padding: 0px;
+}
+
+ul#menu-main-menu li a:hover, ul#menu-main-menu li a:active {
+    color: #FFF;
+    background: #999999;
+    display: block;
+    margin: 0px;
+}
+
+ul#menu-main-menu li li a, ul#menu-main-menu li li a:link, ul#menu-main-menu li li a:visited {
+    width: 170px;
+    background-color: #EBECEC;
+    float: none;
+    text-align: left;
+    margin: 0px;
+    padding: 7px 10px 7px 10px;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    -moz-border-radius-topleft: 0px;
+    -moz-border-radius-topright: 0px;
+    -khtml-border-radius: 0px;
+    -webkit-border-top-left-radius: 0px;
+    -webkit-border-top-right-radius: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+    -webkit-border-bottom-right-radius: 0px;
+}
+
+ul#menu-main-menu li li a:hover, ul#menu-main-menu li li a:active {
+    background: #999999;
+    color: #FFFFFF;
+    padding: 7px 10px 7px 10px;	
+}
+
+
+ul#menu-main-menu li ul a { 
+    width: 160px;
+}
+
+
+ul#menu-main-menu li ul ul {
+    margin: -30px 0 0 191px;
+}
+
+ul#menu-main-menu li:hover ul ul, ul#menu-main-menu li:hover ul ul ul, ul#menu-main-menu li.sfhover ul ul, ul#menu-main-menu li.sfhover ul ul ul {
+    left: -999em;
+}
+
+ul#menu-main-menu li:hover ul, ul#menu-main-menu li li:hover ul, ul#menu-main-menu li li li:hover ul, ul#menu-main-menu li.sfhover ul, ul#menu-main-menu li li.sfhover ul, ul#menu-main-menu li li li.sfhover ul {
+    left: auto;
+}
+
+ul#menu-main-menu li:hover, ul#menu-main-menu li.sfhover { 
+    position: static;
+}
+
+
+
+
+
+
+
+
 #content {
-    margin-top: 40px;
+    margin-top: 28px;
+
+}
+
+#content-inner{
+    padding: 0 8px 0 20px;
 }
 
 #sidebar
 {
     text-align: left;
-    padding-top: 40px;
+    padding-top: 28px;
     padding-bottom: 25px;
 }
 
@@ -80,6 +210,7 @@ body {
 }	
 
 .post {
+
     margin: 0 0 40px;
 }
 
@@ -382,3 +513,189 @@ div.aligncenter {
     margin: 0;
 }
 /* End captions */
+
+
+
+/*panels */
+#panels, #panels .pane {
+    border: 5px solid #000;
+}
+
+.pane{
+    float: left;
+    overflow: hidden;
+}
+
+.single{height:128px;width:128px}
+.double{height:128px;width:261px;}
+.triple{height:128px;width:394px;}
+
+.panel-group{
+    width: 399px;
+    float:left;
+}
+
+#pane1{
+    background: url('images/panes/client-case-studies.jpg') no-repeat;
+    margin: -5px 0 0 -5px;
+}
+
+#pane2{
+    background: #EF8B1E;
+    width: 132px;
+    height: 261px;
+    margin: -5px;
+}
+
+#pane3{
+    background: url('images/panes/industries.jpg') no-repeat;
+    margin: -5px 0 0 0;
+}
+
+#pane4{
+    background: url('images/panes/ideas-b2b.jpg') 0 0 no-repeat;
+    margin: -5px -5px 0 -5px;
+}
+
+#pane4:hover{
+    background: url('images/panes/ideas-b2b.jpg') 0 -128px no-repeat;
+}
+
+#pane5{
+    background: url('images/panes/insight.jpg') 0 0 no-repeat;
+    margin: -5px;
+}
+
+#pane5:hover{
+    background: url('images/panes/insight.jpg') 0 -128px no-repeat;
+}
+
+#pane6{
+    background: url('images/panes/services.jpg')no-repeat;
+    margin: -5px -5px -5px 0;
+}
+#pane7{
+    background: url('images/panes/face.jpg')no-repeat;
+    margin: -5px 0;
+}
+#pane8{
+    margin: -5px -5px -5px 0;
+    background: url('images/panes/success.jpg') 0 0 no-repeat;
+}
+#pane8:hover{
+    background: url('images/panes/success.jpg') 0 -128px no-repeat;
+}
+#pane9{
+    margin: -5px -5px -5px 0;
+    background: url('images/panes/awards.jpg') no-repeat;
+}
+#pane10{
+    margin: -5px -5px -5px 0;
+    background: url('images/panes/creative.jpg') 0 0 no-repeat;
+}
+#pane10:hover{
+    background: url('images/panes/creative.jpg') 0 -128px no-repeat;
+}
+
+
+
+
+/*homepage*/
+#side-image{
+    margin-top:12px;
+}
+
+#sidelinks{
+    margin-top: 28px;
+}
+
+.sidelink{
+    margin-bottom: 7px;
+}
+
+
+/*boxes */
+#homepage-boxes p{
+    font-size: 1.2em;
+}
+
+#homepage-boxes .box{
+    border: 1px solid #0F5BA2;
+    height: 122px;
+}
+
+.news-feed{
+    border:1px solid #0F5BA2;
+    height: 266px
+}
+
+.box-inner{
+    padding: 16px 12px;
+}
+
+.box-inner h2{
+    margin: 0 0 18px 0;
+}
+
+
+.testimonial span{
+    display: block;
+    color: #0F5BA2;
+}
+
+.results{
+    background: url("images/results.jpg")  right no-repeat;
+}
+
+.results .box-inner{
+    padding-right: 120px;
+}
+
+.order-book{
+    background: url("images/order-book.jpg") no-repeat;
+}
+
+.order-book a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/*contact table */
+table.contact{
+    width: 100%;
+}
+
+table.contact td{
+    vertical-align: middle;
+    font-size: 1.2em;
+    padding: 0 0 5px 0;
+}
+
+table.contact td.contact-details{
+    padding: 0 0 5px 5px;
+}
+
+table.contact .social-button.middle{
+    margin: 0 5px;
+}
+
+/*blog feed*/
+
+.news-feed{
+    font-size: 1.2em;
+    color: #000;
+}
+.news-feed li{
+    list-style-type: none;
+    padding-left: 18px;
+    background: url("images/bullet.png") left no-repeat;
+    margin-bottom: 20px;
+}
+
+.news-feed li a{
+    color: #000;
+}

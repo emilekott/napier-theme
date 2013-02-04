@@ -50,7 +50,9 @@
 	-->
 	
 <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' );?>	
+<?php wp_enqueue_script("jquery"); ?>
 <?php wp_head(); ?>
+        
 </head>
 <body>
 <div id="page">
@@ -78,9 +80,7 @@
 			</div><!-- end skip -->
 			
                         <div class="grid_12">
-                            <div id ="nav">
-                                
-                            </div>
+                            <?php wp_nav_menu(array('theme_location' => 'nav', 'container_id' => 'nav')); ?>
                         </div>
 
 			<div class="clear"></div>

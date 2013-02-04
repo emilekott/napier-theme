@@ -1,8 +1,53 @@
 <?php
 /**
  * @package WordPress
- * @subpackage Default_Theme
+ * 
  */
+
+add_action('init', 'register_my_menus');
+
+function register_my_menus() {
+    register_nav_menus(
+            array(
+                'nav' => __('Nav')
+            )
+    );
+}
+
+
+
+/* enqueue sf script */
+if( !is_admin() ){
+	wp_deregister_script('jquery');
+	wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"), false, '');
+	wp_enqueue_script('jquery');
+}
+
+function sf_script()  
+{  
+    
+    // Register the script like this for a theme:  
+    wp_register_script( 'hover-intent', get_template_directory_uri() . '/js/jquery.hoverintent.js' );
+    wp_register_script( 'sf-script', get_template_directory_uri() . '/js/superfish.js' );
+    wp_register_script( 'sf-call', get_template_directory_uri() . '/js/sf-call.js' );
+  
+    // For either a plugin or a theme, you can then enqueue the script:  
+    wp_enqueue_script( 'hover-intent' ); 
+    wp_enqueue_script( 'sf-script' );  
+    wp_enqueue_script( 'sf-call' );
+}  
+add_action( 'wp_enqueue_scripts', 'sf_script' );  
+
+
+//first and last classes to menu
+function add_first_and_last($output) {
+  $output = preg_replace('/class="menu-item/', 'class="first-menu-item menu-item', $output, 1);
+  $output = substr_replace($output, 'class="last-menu-item menu-item', strripos($output, 'class="menu-item'), strlen('class="menu-item'));
+  return $output;
+}
+add_filter('wp_nav_menu', 'add_first_and_last');
+
+
  
 add_filter('comments_template', 'legacy_comments');
 function legacy_comments($file) {
@@ -437,4 +482,9 @@ function kubrick_theme_page() {
 		</div>
 	</div>
 </div>
+
+
+
+
+
 <?php } ?>

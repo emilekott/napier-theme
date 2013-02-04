@@ -38,12 +38,12 @@ body {
     color: #58595B;
 }
 
-h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited {
-    color: #333;
+h1, h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited {
+    color: #0F5BA2;
 }
 
 a, h2 a:hover, h3 a:hover {
-    color: blue;
+    color: #0F5BA2;
 }
 
 a:hover {

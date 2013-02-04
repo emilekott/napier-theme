@@ -5,7 +5,7 @@
  */
 ?>
 	<!-- The class "grid_4" sets the sidebar to be 4 columns wide and "prefix_1" sets one empty column before the sidebar for spacing -->
-	<div id="sidebar" class="grid_4 prefix_1">
+	<div id="sidebar" class="grid_3">
 		<ul>
 			<?php 	/* Widgetized sidebar, if you have the plugin installed. */
 					if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
