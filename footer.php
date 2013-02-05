@@ -8,7 +8,7 @@
 		
 			<div id="footerContent" class="grid_12">
 				<p>
-					Copyright &copy; <?php echo date("Y");?> Napier Partnership Limited All Rights Reserved
+					Copyright &copy; <?php echo date("Y");?> &bull; <a href="<?php echo get_option('home'); ?>/">Napier Partnership Limited</a> &bull; All Rights Reserved
 					<!-- <?php echo get_num_queries(); ?> queries. <?php timer_stop(1); ?> seconds. -->
 				</p>
 			</div><!-- end footerContent -->

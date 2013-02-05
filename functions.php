@@ -39,6 +39,16 @@ function sf_script()
 add_action( 'wp_enqueue_scripts', 'sf_script' );  
 
 
+function panel_script()
+{
+    if (is_front_page()){
+        wp_register_script( 'panels', get_template_directory_uri() . '/js/panels.js' );
+        wp_enqueue_script( 'panels' );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'panel_script' );  
+
+
 //first and last classes to menu
 function add_first_and_last($output) {
   $output = preg_replace('/class="menu-item/', 'class="first-menu-item menu-item', $output, 1);

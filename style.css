@@ -11,8 +11,7 @@ Author URI: http://acroweb.co.uk
 
 /* separate style sheets for colours and typography */
 
-@import url(colours.css);
-@import url(typography.css);
+
 
 /* Begin Structure */
 
@@ -21,6 +20,11 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
+    background: #DFE0E1;
+    color: #000;
+    font-size: 62.5%; /* Resets 1em to 10px */
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    text-align: left;
 }
 
 #page {
@@ -31,8 +35,12 @@ body {
 }
 
 #header {
-
+    background-color: #DFE0E1;
     width: 100%;
+}
+
+#masthead, #wrapper, #footer-wrapper{
+    background: #fff;
 }
 
 #masthead {
@@ -51,7 +59,17 @@ body {
 
 #site-description{
     margin-bottom: 18px;
+    color: #0F5BA2;
+    font-size: 2.7em;
+    font-weight: bold;
 }
+
+#telephone{
+    color: #58595B;
+    font-size: 2.1em;
+    font-weight: bold;
+}
+
 
 /* This hides the 'skip to' links and maintains accessibility */
 
@@ -64,6 +82,90 @@ body {
 }
 
 
+
+/*main */
+h1, h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited {
+    color: #0F5BA2;
+}
+
+h1, h1 a, h1 a:hover, h1 a:visited, #headerimg .description {
+    text-decoration: none;
+}
+
+h2, h2 a, h2 a:hover, h2 a:visited, h3, h3 a, h3 a:hover, h3 a:visited, #sidebar h2, #wp-calendar caption, cite {
+    text-decoration: none;
+   
+}
+
+h1 {
+    font-size: 2.2em;
+    line-height: 0.818182em;
+    margin-top: 0em;
+    margin-bottom: 0.818182em;
+    text-transform: capitalize;
+}
+
+h2 {
+    font-size: 1.8em;
+    line-height: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+#header h2 {
+    margin-bottom: 0em;
+    line-height: 0em;
+}
+
+h3 {
+    font-size: 1.6em;
+    line-height: 1.125em;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+#sidebar h3 {
+    font-size: 1.2em;
+    line-height: 1.2em;
+    margin-top: 1.2em;
+    margin-bottom: 0em;
+}
+
+p {
+    font-size: 1.5em;
+    line-height: 1.2em;
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+    text-align: left
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #EF8B1E;
+    text-decoration: none;
+}
+
+
+a, h2 a:hover, h3 a:hover {
+    color: #0F5BA2;
+     -webkit-transition: color 0.4s;
+    -moz-transition: color 0.4s;
+    -o-transition: color 0.4s;
+    transition: color 0.4s;
+}
+
+
+
+a img {
+    border: none;
+}
+
+code {
+    font: 1.1em 'Courier New', Courier, Fixed;
+}
 
 
 /*nav layout */
@@ -110,6 +212,19 @@ ul#menu-main-menu li a, ul#menu-main-menu li a:link, ul#menu-main-menuli a:visit
     width: 87px;
     text-align: center;
     text-decoration: none;
+    -webkit-transition: color 0.4s, background-color 0.4s;
+    -moz-transition: color 0.4s, background-color 0.4s;
+    -o-transition: color 0.4s, background-color 0.4s;
+    transition: color 0.4s, background-color 0.4s;
+    
+}
+
+ul#menu-main-menu li.current-menu-item a{
+    color: #000;
+    -webkit-transition: color 0.4s, background-color 0.4s;
+    -moz-transition: color 0.4s, background-color 0.4s;
+    -o-transition: color 0.4s, background-color 0.4s;
+    transition: color 0.4s, background-color 0.4s;
 }
 ul#menu-main-menu li.last-menu-item a{
     border: none;
@@ -144,13 +259,7 @@ ul#menu-main-menu li li a, ul#menu-main-menu li li a:link, ul#menu-main-menu li 
     border-bottom: 1px solid #000;
     border-left: 1px solid #000;
     border-right: 1px solid #000;
-    -moz-border-radius-topleft: 0px;
-    -moz-border-radius-topright: 0px;
-    -khtml-border-radius: 0px;
-    -webkit-border-top-left-radius: 0px;
-    -webkit-border-top-right-radius: 0px;
-    -webkit-border-bottom-left-radius: 0px;
-    -webkit-border-bottom-right-radius: 0px;
+
 }
 
 ul#menu-main-menu li li a:hover, ul#menu-main-menu li li a:active {
@@ -204,10 +313,30 @@ ul#menu-main-menu li:hover, ul#menu-main-menu li.sfhover {
     padding-bottom: 25px;
 }
 
+#sidebar ul ul {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin-top: 0.9em;
+    margin-bottom: 0em;
+}
+
+
 #footer {
     margin: 0;
     padding: 0;
+    background: #DFE0E1;
+    border: none;
+    color: #808080;
 }	
+
+#footer p{
+    font-size: 1.1em;
+}
+
+#footerContent{
+    border-top: 1px solid #0F5BA2;
+    margin-top: 18px;
+}
 
 .post {
 
@@ -219,17 +348,33 @@ ul#menu-main-menu li:hover, ul#menu-main-menu li.sfhover {
 }
 
 .smallattachment {
+    text-align: center;
     float: left;
     width: 128px;
     margin: 5px 5px 5px 0px;
 }
 
+
+small, #sidebar ul ul li, #sidebar ul ol li, .nocomments, .postmetadata, blockquote, strike {
+    color: #777;
+}
+
+small {
+    font-size: 1em;
+    line-height: 1.8em;
+    margin-top: 1.8em;
+    margin-bottom: 1.8em;
+}
+
+
 .attachment {
     margin: 5px 0px;
+    text-align: center;
 }
 
 .postmetadata {
     clear: both;
+    text-align: left;
 }
 
 /* End Structure */
@@ -298,6 +443,10 @@ html>body .entry li {
     padding: 0;
 }
 
+.entry p a:visited {
+    color: #b85b5a;
+}
+
 .postmetadata ul, .postmetadata li {
     display: inline;
     list-style-type: none;
@@ -358,6 +507,24 @@ select {
     float: right;
 }
 
+.thread-alt {
+    background-color: #f8f8f8;
+}
+
+.thread-even {
+    background-color: white;
+}
+
+
+.depth-1 {
+    border: 1px solid #ddd;
+}
+
+.even, .alt {
+    border-left: 1px solid #ddd;
+}
+
+
 /* End Form Elements */
 
 /* Begin Comments*/
@@ -376,20 +543,37 @@ select {
     margin: 15px 0 10px;
     padding: 5px 5px 10px 10px;
     list-style: none;
+    font-weight: bold;
 }
 
 .commentlist li .avatar { 
     float: right;
     padding: 2px;
+    border: 1px solid #eee;
+    background: #fff;
 }
 
 .commentlist li ul li { 
     margin-right: -5px;
     margin-left: 10px;
+    font-size: 1em;
 }
 
 .commentlist p {
     margin: 10px 5px 10px 0;
+    font-weight: normal;
+    line-height: 1.5em;
+    text-transform: none;
+}
+
+.commentlist li, #commentform input, #commentform textarea {
+    font-size: 0.9em;
+}
+
+.commentlist cite, .commentlist cite a {
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.1em;
 }
 
 .children {
@@ -409,6 +593,7 @@ select {
 .commentmetadata {
     margin: 0;
     display: block;
+    font-weight: normal;
 }
 
 /* End Comments */
@@ -418,6 +603,10 @@ select {
     empty-cells: show;
     margin: 10px auto 0;
     width: 155px;
+}
+
+#wp-calendar #prev a, #wp-calendar #next a {
+    font-size: 9pt;
 }
 
 #wp-calendar #next a {
@@ -432,11 +621,20 @@ select {
 
 #wp-calendar a {
     display: block;
+    text-decoration: none;
 }
 
 #wp-calendar caption {
     text-align: center;
     width: 100%;
+    font-weight: bold;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+#wp-calendar th {
+    font-style: normal;
+    text-transform: capitalize;
 }
 
 #wp-calendar td {
@@ -444,11 +642,27 @@ select {
     text-align: center;
 }
 
+#wp-calendar td.pad:hover { /* Doesn't work in IE */
+    background-color: #fff;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+}
+
 /* End Calendar */
 
 /* Begin Various Tags & Classes */
 acronym, abbr, span.caps {
     cursor: help;
+    font-size: 0.9em;
+    letter-spacing: .07em;
+}
+
+acronym, abbr {
+    border-bottom: 1px dashed #999;
+    border-left: 5px solid #ddd;
 }
 
 blockquote {
@@ -471,6 +685,14 @@ blockquote cite {
 
 hr {
     display: none;
+}
+
+.navigationTop, .navigationBottom {
+    font-size: 1.5em;
+    line-height: 1.2em;
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+    text-align: left
 }
 
 .navigationTop {
@@ -501,11 +723,18 @@ div.aligncenter {
     text-align: center;
     padding-top: 4px;
     margin: 10px;
+    border: 1px solid #ddd;
+    background-color: #f3f3f3;
+    -moz-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
 }
 
 .wp-caption img {
     margin: 0;
     padding: 0;
+    border: 0 none;
 }
 
 .wp-caption p.wp-caption-text {
@@ -557,7 +786,7 @@ div.aligncenter {
     margin: -5px -5px 0 -5px;
 }
 
-#pane4:hover{
+.no-js #pane4:hover{
     background: url('images/panes/ideas-b2b.jpg') 0 -128px no-repeat;
 }
 
@@ -566,7 +795,7 @@ div.aligncenter {
     margin: -5px;
 }
 
-#pane5:hover{
+.no-js #pane5:hover{
     background: url('images/panes/insight.jpg') 0 -128px no-repeat;
 }
 
@@ -582,7 +811,7 @@ div.aligncenter {
     margin: -5px -5px -5px 0;
     background: url('images/panes/success.jpg') 0 0 no-repeat;
 }
-#pane8:hover{
+.no-js #pane8:hover{
     background: url('images/panes/success.jpg') 0 -128px no-repeat;
 }
 #pane9{
@@ -593,7 +822,7 @@ div.aligncenter {
     margin: -5px -5px -5px 0;
     background: url('images/panes/creative.jpg') 0 0 no-repeat;
 }
-#pane10:hover{
+.no-js #pane10:hover{
     background: url('images/panes/creative.jpg') 0 -128px no-repeat;
 }
 
@@ -696,6 +925,3 @@ table.contact .social-button.middle{
     margin-bottom: 20px;
 }
 
-.news-feed li a{
-    color: #000;
-}
