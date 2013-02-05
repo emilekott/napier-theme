@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 
 	<!-- The class "grid_7" restricts the div to 7 columns wide -->
-	<div id="content" class="grid_7">
-
+	<div id="content" class="grid_9">
+            <div id="content-inner">
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<div class="post" id="post-<?php the_ID(); ?>">
-		<h2><?php the_title(); ?></h2>
+		<h1><?php the_title(); ?></h1>
 			<div class="entry">
 				<?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>
 
@@ -16,8 +16,7 @@
 		</div><!-- end post -->
 		
 		<?php endwhile; endif; ?>
-		<?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
-		
+            </div>
 	</div><!-- end content -->
 
 <?php get_sidebar(); ?>

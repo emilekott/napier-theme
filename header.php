@@ -55,7 +55,7 @@
         
 </head>
 <body>
-<div id="page">
+<div id="page" <?php echo (is_front_page())?'class="home"':'class="not-home"' ?>>
 
 	<!-- Placing the header div outside the grid system allows for a full width header -->
 	<div id="header">
@@ -81,6 +81,7 @@
 			
                         <div class="grid_12">
                             <?php wp_nav_menu(array('theme_location' => 'nav', 'container_id' => 'nav')); ?>
+                            <?php if (!is_front_page()){ ?><div id="nav-shadow"></div><?php } ?>
                         </div>
 
 			<div class="clear"></div>

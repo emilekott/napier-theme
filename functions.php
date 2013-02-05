@@ -77,13 +77,24 @@ function comment_add_microid($classes) {
 }
 add_filter('comment_class','comment_add_microid');
 
-if ( function_exists('register_sidebar') )
+if ( function_exists('register_sidebar') ){
     register_sidebar(array(
+        'name' => 'Default Sidebar',
+        'id' => 'default-sidebar',
         'before_widget' => '<li id="%1$s" class="widget %2$s">',
         'after_widget' => '</li>',
-        'before_title' => '<h3 class="widgettitle">',
-        'after_title' => '</h3>',
+        'before_title' => '<h2 class="widgettitle">',
+        'after_title' => '</h2>',
     ));
+    register_sidebar(array(
+        'name' => 'Home Sidebar',
+        'id' => 'home-sidebar',
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget' => '</li>',
+        'before_title' => '<h2 class="widgettitle">',
+        'after_title' => '</h2>',
+    ));
+}
 
 /** @ignore */
 function kubrick_head() {

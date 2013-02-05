@@ -5,8 +5,14 @@
     </div>
 </div>
 
-<div class="grid_3" id="sidelinks">
-    <div class="sidelink"><a href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/meet-team.jpg" /></a></div>
-    <div class="sidelink"><a href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/white-papers.jpg" /></a></div>
-    <div class="sidelink"><a href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/payment-results.jpg" /></a></div>
-</div>
+<div id="sidebar" class="grid_3">
+    <ul>
+        <?php
+        if (dynamic_sidebar('home-sidebar')) :
+        else :
+            ?>
+
+        <em>There are no widgets currently enabled</em>
+        <?php endif; ?>
+    </ul>
+</div><!-- end sidebar -->
