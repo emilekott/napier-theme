@@ -57,7 +57,7 @@
 <body>
 <div id="page" <?php echo (is_front_page())?'class="home"':'class="not-home"' ?>>
 
-	<!-- Placing the header div outside the grid system allows for a full width header -->
+	<!-- possible full width header -->
 	<div id="header">
 		
 		
@@ -91,3 +91,11 @@
 	</div><!-- end header -->
 	
 	<div id="wrapper" class="container_12">
+            <?php 
+            //add breadcrumbs to all but front page
+            if (!is_front_page()){ 
+                echo '<div class="grid_12">';
+                if (function_exists('wordpress_breadcrumbs')) wordpress_breadcrumbs();
+                echo '</div>';
+            }
+            ?>

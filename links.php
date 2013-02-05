@@ -1,19 +1,19 @@
 <?php
 /*
-Template Name: Links
-*/
+  Template Name: Links
+ */
 ?>
 
 <?php get_header(); ?>
 
-<!-- The class "grid_7" restricts the div to 7 columns wide -->
-<div id="content" class="grid_7">
+<div id="content" class="grid_9">
+    <div id="content-inner">
 
-<h3>Links:</h3>
-<ul>
-<?php wp_list_bookmarks(); ?>
-</ul>
-
+        <h3>Links:</h3>
+        <ul>
+            <?php wp_list_bookmarks(); ?>
+        </ul>
+    </div>
 </div><!-- end content -->
 
 <?php get_sidebar(); ?>

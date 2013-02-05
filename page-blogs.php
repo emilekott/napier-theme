@@ -5,7 +5,6 @@
 ?>
 <?php get_header(); ?>
 
-<!-- The class "grid_7" restricts the div to 7 columns wide -->
 <div id="content" class="grid_9">
     <div id="content-inner">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -21,10 +20,11 @@
                 </div><!-- end post -->
 
             <?php endwhile;
-        endif; ?>
+        endif;
+        ?>
 
         <div id="blogs-teaser">
-           <?php get_template_part("all-blogs"); ?>
+<?php get_template_part("all-blogs"); ?>
             <div class="clear"></div>
         </div>
     </div>

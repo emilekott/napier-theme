@@ -2,8 +2,8 @@
 get_header(); ?>
 
 	<!-- The class "grid_7" restricts the div to 7 columns wide -->
-	<div id="content" class="grid_7">
-
+	<div id="content" class="grid_9">
+            <div id="content-inner">
 	<?php if (have_posts()) : ?>
 
 		<?php while (have_posts()) : the_post(); ?>
@@ -34,7 +34,7 @@ get_header(); ?>
 		<?php get_search_form(); ?>
 
 	<?php endif; ?>
-
+            </div>
 	</div><!-- end content -->
 
 <?php get_sidebar(); ?>

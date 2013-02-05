@@ -3,13 +3,8 @@ Theme Name: Napier 3.0
 Description: A 960-grid-based theme for Napier
 Version: 1.0
 Author: Emile Kott
-Author URI: http://acroweb.co.uk
-
-
-        
+Author URI: http://acroweb.co.uk        
 */
-
-/* separate style sheets for colours and typography */
 
 
 
@@ -138,6 +133,10 @@ p, .entry ul, .entry td{
     margin-top: 1.2em;
     margin-bottom: 1.2em;
     text-align: left
+}
+
+.home p{
+    font-size: 1.5em;
 }
 
 .entry div  {
@@ -307,7 +306,7 @@ ul#menu-main-menu li:hover, ul#menu-main-menu li.sfhover {
 
 
 
-#content {
+.home #content {
     margin-top: 28px;
 
 }
@@ -316,16 +315,29 @@ ul#menu-main-menu li:hover, ul#menu-main-menu li.sfhover {
     padding: 0 8px 0 20px;
 }
 
+.not-home #content{
+    margin-top: 15px;
+}
+
 .not-home #content-inner{
     padding: 0 20px;
 }
 
+/*breadcrumbs*/
+#crumbs{
+    padding: 10px 0 0 20px;
+}
 
-#sidebar
+.not-home #sidebar
 {
     text-align: left;
-    padding-top: 28px;
+    padding-top: 15px;
     padding-bottom: 25px;
+}
+
+.home #sidebar{
+    padding-bottom: 0;
+    padding-top: 28px;
 }
 
 #sidebar ul ul {
@@ -351,6 +363,11 @@ ul#menu-main-menu li:hover, ul#menu-main-menu li.sfhover {
 #footerContent{
     border-top: 1px solid #0F5BA2;
     margin-top: 18px;
+}
+
+#prca{
+    margin-top: 5px;
+    text-align:right;
 }
 
 .post {
@@ -407,15 +424,13 @@ img.centered {
 }
 
 img.alignright {
-    padding: 4px;
-    margin: 0 0 2px 7px;
+    margin: 0 0 10px 10px;
     display: inline;
 }
 
 img.alignleft {
-    padding: 4px;
-    margin: 0 7px 2px 0;
-    display: inline;
+    margin: 0 10px 10px 0;
+    float: left;
 }
 
 .alignright {
@@ -1029,6 +1044,27 @@ form#newslettersignup br{
     margin-bottom: 0;
 }
 
+.youtube-thumb{
+    position: relative;
+    height: 150px;
+}
+
+.youtube-thumb img, .play-button{
+    position: absolute;
+}
+
+.play-button{
+    width: 200px;
+    height: 38px;
+    overflow:hidden;
+    background: url('images/play-button.png') 0 0 no-repeat;
+    top: 55px;
+}
+
+.youtube-thumb a:hover .play-button{
+    background: url('images/play-button.png') 0 -38px no-repeat;
+}
+
 
 /*contact widget */
 .ContactWidget{
@@ -1063,3 +1099,6 @@ form#newslettersignup br{
 .twitter-link{
     margin-right: 5px;
 }
+
+
+

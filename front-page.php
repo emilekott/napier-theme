@@ -2,7 +2,6 @@
 <?php get_template_part( 'panels' ); ?> 
 
 
-	<!-- The class "grid_7" restricts the div to 7 columns wide -->
 	<div id="content" class="grid_7">
             <div id="content-inner">
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>

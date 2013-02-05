@@ -7,13 +7,14 @@ Template Name: Archive
 <?php get_header(); ?>
 
 	<!-- The class "grid_7" restricts the div to 7 columns wide -->
-	<div id="content" class="grid_7">
+	<div id="content" class="grid_9">
+            <div id="content-inner">
 
 		<?php if (have_posts()) : ?>
 
 		<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
 		<?php /* If this is a category archive */ if (is_category()) { ?>
-		<h2 class="pagetitle">Archive for the &#8216;<?php single_cat_title(); ?>&#8217; Category</h2>
+		<h2 class="pagetitle"><?php single_cat_title(); ?></h2>
  	  <?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
 		<h2 class="pagetitle">Posts Tagged &#8216;<?php single_tag_title(); ?>&#8217;</h2>
  	  <?php /* If this is a daily archive */ } elseif (is_day()) { ?>
@@ -77,7 +78,7 @@ Template Name: Archive
 		get_search_form();
 
 	endif; ?>
-
+            </div>
 	</div><!-- end content -->
 
 <?php get_sidebar(); ?>

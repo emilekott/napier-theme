@@ -1,5 +1,5 @@
 <?php
-//grab all the data
+//get all the data
 $misc_marketing = new WP_Query('category_name=misc-marketing&showposts=9');
 $napier_news = new WP_Query('category_name=napier-news&showposts=9');
 $about_napier = new WP_Query('category_name=news-about-napier&showposts=9');
