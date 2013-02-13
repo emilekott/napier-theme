@@ -50,6 +50,7 @@ add_filter('wp_nav_menu', 'add_first_and_last');
 
 
 
+
 /*
  * 
  * Function to add breadcrumbs
@@ -148,6 +149,15 @@ function wordpress_breadcrumbs() {
 }
 
 
+/*
+ * Read more link on excerpts
+ * 
+ */
+function new_excerpt_more($more) {
+       global $post;
+	return '...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 
 
  

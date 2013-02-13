@@ -38,7 +38,7 @@ if ( post_password_required() ) {
 
 <div id="respond">
 
-<h3><?php comment_form_title( 'Leave a reply', 'Leave a reply to %s' ); ?></h3>
+<h3><?php comment_form_title( 'Leave a comment', 'Leave a reply to %s' ); ?></h3>
 
 <div class="cancel-comment-reply">
 	<small><?php cancel_comment_reply_link(); ?></small>

@@ -1,9 +1,3 @@
-<?php
-/*
-Template Name: Archive
-*/
-?>
-
 <?php get_header(); ?>
 
 	<div id="content" class="grid_9">
@@ -12,21 +6,8 @@ Template Name: Archive
 		<?php if (have_posts()) : ?>
 
 		<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
-		<?php /* If this is a category archive */ if (is_category()) { ?>
 		<h1 class="pagetitle"><?php single_cat_title(); ?></h1>
- 	  <?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
-		<h1 class="pagetitle">Posts Tagged &#8216;<?php single_tag_title(); ?>&#8217;</h1>
- 	  <?php /* If this is a daily archive */ } elseif (is_day()) { ?>
-		<h1 class="pagetitle">Archive for <?php the_time('F jS, Y'); ?></h1>
- 	  <?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
-		<h1 class="pagetitle">Archive for <?php the_time('F, Y'); ?></h1>
- 	  <?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
-		<h1 class="pagetitle">Archive for <?php the_time('Y'); ?></h1>
-	  <?php /* If this is an author archive */ } elseif (is_author()) { ?>
-		<h1 class="pagetitle">Author Archive</h1>
- 	  <?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-		<h1 class="pagetitle">Blog Archives</h1>
- 	  <?php } ?>
+ 	
 
 
 		
@@ -38,14 +19,14 @@ Template Name: Archive
 		
 		<div <?php post_class() ?>>
 				<h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-				<small><?php the_time('l, F jS, Y') ?></small>
+				<small><?php the_time('jS M Y') ?> &bull; <a href="<?php the_permalink() ?>#respond">Leave a comment</a></small>
 
 				<div class="entry">
-					<?php the_excerpt() ?>
+					<?php the_excerpt(); ?>
 				</div><!-- end entry -->
 
 				<p class="postmetadata"><?php the_tags('Tags: ', ', ', '<br />'); ?> Posted in <?php the_category(', ') ?> | <?php edit_post_link('Edit', '', ' | '); ?>  <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
-
+                                <p><a class="read-more" href="<?php the_permalink() ?>">Read More</a></p>
 			</div><!-- end post -->
 
 		<?php endwhile; ?>

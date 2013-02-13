@@ -17,7 +17,6 @@
 <!-- These two lines call the css files essential for the 960 grid system - DO NOT REMOVE!! -->
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory'); ?>/css/reset.css" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory'); ?>/css/960.css" />
-
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> Atom Feed" href="<?php bloginfo('atom_url'); ?>" />
@@ -78,14 +77,15 @@
 			<p></p><a href="#wrapper" title="skip to main content">skip to main content</a></p>
 			<p></p><a href="#main-menu" title="skip to main menu">skip to main menu</a></p>
 			</div><!-- end skip -->
-			
+                        <div class="clear"></div>
+                        <div id="nav-wrapper">
                         <div class="grid_12">
                             <?php wp_nav_menu(array('theme_location' => 'nav', 'container_id' => 'nav')); ?>
                             <?php if (!is_front_page()){ ?><div id="nav-shadow"></div><?php } ?>
                         </div>
-
+                        
 			<div class="clear"></div>
-		
+                        </div>
 		</div><!-- end headerContainer -->
 		
 	</div><!-- end header -->
