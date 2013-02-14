@@ -1,4 +1,5 @@
 	</div><!-- end wrapper -->
+        </div><!-- end wrapper-container -->
         <!-- full width footer if necessary -->
 	<div id="footer">
 	

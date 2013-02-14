@@ -15,8 +15,8 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
-    background: #DFE0E1;
-    color: #000;
+    background: #FFF;
+    color: #525252;
     font-size: 62.5%; /* Resets 1em to 10px */
     font-family: verdana, Arial, sans-serif;
     text-align: left;
@@ -30,8 +30,29 @@ body {
     width: 100%;
 }
 
+#strap-header{
+    height: 28px;
+    background-color: #525252;
+    border-bottom: 1px solid #000;
+}
+
+.contact-header{
+    color: #fff;    
+}
+
+.contact-header a{
+    color: #fff;
+}
+
+.contact-header p{
+    margin: 3px 20px 0 0;
+    float: right;
+    font-size: 1.5em;
+    line-height: 1.2em;
+}
+
 #header {
-    background-color: #DFE0E1;
+    background-color: #FFF;
     width: 100%;
 }
 
@@ -39,8 +60,16 @@ body {
     background: #fff;
 }
 
+#wrapper-container{
+    background: url("images/shadows_top.png") no-repeat center 0px;
+}
+
+#wrapper{
+    padding-top: 15px;
+}
+
 #masthead {
-    padding: 40px 0 0 0;
+    padding: 35px 0 0 0;
 }
 
 #logo{
@@ -49,7 +78,7 @@ body {
 
 #tag-line{
     text-align:right;
-    padding: 0 20px 0 0;
+    padding: 10px 20px 0 0;
 
 }
 
@@ -57,13 +86,11 @@ body {
     margin-bottom: 18px;
     color: #0F5BA2;
     font-size: 2.7em;
-    font-weight: bold;
 }
 
 #telephone{
     color: #58595B;
     font-size: 2.1em;
-    font-weight: bold;
 }
 
 
@@ -177,18 +204,18 @@ code {
 
 /*nav layout */
 #nav-wrapper{
-    background: #EBECEC;
-    margin-top: 35px;
+    background: #999;
+    margin-top: 30px;
+    height: 36px;
 }
 
 #nav {
     width: 938px;
-   
-    height: 28px;
-    font-size: 1.2em;
+    
+    
+    font-size: 1.5em;
     margin: 0 auto;
     padding: 0px;
-    background: #EBECEC;
     font-weight: normal;
 
     
@@ -198,7 +225,7 @@ code {
 
 ul#menu-main-menu {
     margin: 0px;
-    padding: 0px;
+    padding: 7px 0 0 0;
     float: left;
     list-style: none;
 }
@@ -210,26 +237,37 @@ ul#menu-main-menu li {
     margin: 0px;
     padding: 0px;
     background: none;
-
+    padding-bottom: 7px;
 }
 
+ul#menu-main-menu li li{
+    padding-bottom: 0;
+}
 ul#menu-main-menu li a, ul#menu-main-menu li a:link, ul#menu-main-menuli a:visited {
     display: block;
-    border-right: 1px solid #000;
     margin: 0px;
-    padding: 5px 8px 8px 8px;
-    width: 87px;
+    padding-left: 15px;
     text-align: center;
     text-decoration: none;
     -webkit-transition: color 0.4s, background-color 0.4s;
     -moz-transition: color 0.4s, background-color 0.4s;
     -o-transition: color 0.4s, background-color 0.4s;
     transition: color 0.4s, background-color 0.4s;
+    color: #fff;
     
 }
 
+ul#menu-main-menu li a::after {
+content: "|";
+margin-left: 15px;
+}
+
+ul#menu-main-menu li.last-menu-item a::after, ul#menu-main-menu li li a::after{
+    content: "";
+}
+
 ul#menu-main-menu li.current-menu-item a{
-    color: #000;
+    color: #FFF;
     -webkit-transition: color 0.4s, background-color 0.4s;
     -moz-transition: color 0.4s, background-color 0.4s;
     -o-transition: color 0.4s, background-color 0.4s;
@@ -247,34 +285,29 @@ ul#menu-main-menu li ul {
     left: -999em;
     height: auto;
     width: 160px;
-    margin: 0 0 0 -1px;
+    margin: 0;
     padding: 0px;
+
 }
 
 ul#menu-main-menu li a:hover, ul#menu-main-menu li a:active {
-    color: #FFF;
-    background: #999999;
+    color: #ccc;
     display: block;
     margin: 0px;
 }
 
 ul#menu-main-menu li li a, ul#menu-main-menu li li a:link, ul#menu-main-menu li li a:visited {
     width: 170px;
-    background-color: #EBECEC;
+    background-color: #999999;
     float: none;
     text-align: left;
     margin: 0px;
-    padding: 7px 10px 7px 10px;
-    border-bottom: 1px solid #000;
-    border-left: 1px solid #000;
-    border-right: 1px solid #000;
+    padding: 7px 15px;
+    
 
 }
 
-ul#menu-main-menu li li a:hover, ul#menu-main-menu li li a:active {
-    background: #999999;
-    color: #FFFFFF;
-    padding: 7px 10px 7px 10px;	
+ul#menu-main-menu li li a:hover, ul#menu-main-menu li li a:active {	
 }
 
 
@@ -284,7 +317,7 @@ ul#menu-main-menu li ul a {
 
 
 ul#menu-main-menu li ul ul {
-    margin: -30px 0 0 191px;
+    margin: -33px 0 0 200px;
 }
 
 ul#menu-main-menu li:hover ul ul, ul#menu-main-menu li:hover ul ul ul, ul#menu-main-menu li.sfhover ul ul, ul#menu-main-menu li.sfhover ul ul ul {
@@ -330,7 +363,7 @@ ul#menu-main-menu li:hover, ul#menu-main-menu li.sfhover {
 
 /*breadcrumbs*/
 #crumbs{
-    padding: 15px 0 0 20px;
+    padding: 0 0 0 20px;
     font-size: 1.2em;
 }
 
@@ -357,7 +390,7 @@ ul#menu-main-menu li:hover, ul#menu-main-menu li.sfhover {
 #footer {
     margin: 0;
     padding: 0;
-    background: #DFE0E1;
+    background: #FFF;
     border: none;
     color: #808080;
 }	
