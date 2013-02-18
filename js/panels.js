@@ -4,7 +4,7 @@ $j(document).ready(function() {
     $j('#panels').removeClass('no-js');
     
     
-    $j('.hover-panel div').hover(hoverIn,hoverOut);
+    $j('.hover-panel').hover(hoverIn,hoverOut);
 });
 
 hoverIn = function(){
