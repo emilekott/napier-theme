@@ -400,8 +400,13 @@ ul#menu-main-menu li:hover, ul#menu-main-menu li.sfhover {
 }
 
 #footerContent{
-    border-top: 1px solid #0F5BA2;
-    margin-top: 18px;
+    
+
+}
+
+#footer{
+        margin-top: 18px;
+        border-top: 1px solid #0F5BA2;
 }
 
 #prca{
