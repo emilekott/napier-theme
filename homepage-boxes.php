@@ -5,7 +5,7 @@
 
 ?>
 
-<div class="clear" style="height:13px;"></div>
+<div class="clear"></div>
 
 <div class="grid_9" id="homepage-boxes">
     <div class="grid_4 alpha">

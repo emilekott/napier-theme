@@ -162,15 +162,20 @@ p, .entry ul, .entry td{
     margin-bottom: 1.2em;
     text-align: left
 }
-
+/*
 .home p{
-    font-size: 1.5em;
-    line-height: 1.2em;
+    font-size: 1.4em;
+    line-height: 1.8em;
+}
+*/
+
+.home .post{
+    margin-bottom: 0;
 }
 
 .entry div  {
-    font-size: 1.1em;
-    line-height: 1.1em;
+    font-size: 1.2em;
+    line-height: 1.3em;
 }
 
 a {
