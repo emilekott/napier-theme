@@ -248,7 +248,7 @@ ul#menu-main-menu li li{
 ul#menu-main-menu li a, ul#menu-main-menu li a:link, ul#menu-main-menuli a:visited {
     display: block;
     margin: 0px;
-    padding-left: 14px;
+    padding-left: 13px;
     text-align: center;
     text-decoration: none;
     -webkit-transition: color 0.4s, background-color 0.4s;
@@ -261,7 +261,7 @@ ul#menu-main-menu li a, ul#menu-main-menu li a:link, ul#menu-main-menuli a:visit
 
 ul#menu-main-menu li a::after {
 content: "|";
-margin-left: 14px;
+margin-left: 13px;
 }
 
 ul#menu-main-menu li.last-menu-item a::after, ul#menu-main-menu li li a::after{
