@@ -19,6 +19,8 @@ Template Name: Page-Linked
 
                 </div><!-- end post -->
                 <?php
+                //grab sibling pages (share a parent and prev / next in menu_order)
+                
 		$args= array ('child_of' => $post->post_parent,
 					'parent' => $post->post_parent,
 					'sort_column' => 'menu_order',
@@ -34,7 +36,7 @@ Template Name: Page-Linked
 		$prevID = $thepages[$current - 1];
 		$nextID = $thepages[$current + 1];
 
-                //see if there are prev and next posts. If there are, print links.
+                //If there are sibling pages, print links.
                     if (!empty($prevID)) {
                         $prev = '<a href="'.get_permalink($prevID).'">&laquo; '.get_the_title($prevID).'</a>';
                     }	
