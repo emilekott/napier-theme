@@ -1164,5 +1164,12 @@ form#newslettersignup br{
     margin-right: 5px;
 }
 
+/*search form */
+.search-submit{
+    float: right;
+}
 
+.search-text{
+    width: 145px;
+}
 

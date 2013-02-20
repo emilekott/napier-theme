@@ -19,11 +19,11 @@ Template Name: Page-Linked
 
                 </div><!-- end post -->
                 <?php
-		$paramsforquery= array ('child_of' => $post->post_parent,
+		$args= array ('child_of' => $post->post_parent,
 					'parent' => $post->post_parent,
 					'sort_column' => 'menu_order',
 					'sort_order' => 'asc');
-		$pagelist = get_pages($paramsforquery);
+		$pagelist = get_pages($args);
 
 		$thepages = array();
 		foreach ($pagelist as $apage) {
@@ -33,11 +33,7 @@ Template Name: Page-Linked
 		$current = array_search($post->ID, $thepages);
 		$prevID = $thepages[$current - 1];
 		$nextID = $thepages[$current + 1];
-		?>
-                
-                
-                
-                <?php
+
                 //see if there are prev and next posts. If there are, print links.
                     if (!empty($prevID)) {
                         $prev = '<a href="'.get_permalink($prevID).'">&laquo; '.get_the_title($prevID).'</a>';
