@@ -10,6 +10,101 @@ Author URI: http://acroweb.co.uk
 
 /* Begin Structure */
 
+/*panels */
+#panels, #panels .pane {
+    border: 5px solid #000;
+}
+
+.pane{
+    float: left;
+    overflow: hidden;
+    display:block;
+}
+
+.single{height:128px;width:128px}
+.double{height:128px;width:261px;}
+.triple{height:128px;width:394px;}
+
+.panel-group{
+    width: 399px;
+    float:left;
+}
+
+#pane1{
+    background: url('images/panes/client-case-studies.jpg') no-repeat;
+    margin: -5px 0 0 -5px;
+}
+
+#pane2{
+    background: #EF8B1E;
+    width: 132px;
+    height: 261px;
+    margin: -5px;
+}
+
+#pane3{
+    background: url('images/panes/clients.jpg') 0 0 no-repeat;
+    margin: -5px 0 0 0;
+}
+
+.no-js #pane3:hover{
+    background: url('images/panes/clients.jpg') 0 -128px no-repeat;
+}
+
+#pane4{
+    background: url('images/panes/ideas-b2b.jpg') 0 0 no-repeat;
+    margin: -5px -5px 0 -5px;
+}
+
+.no-js #pane4:hover{
+    background: url('images/panes/ideas-b2b.jpg') 0 -128px no-repeat;
+}
+
+#pane5{
+    background: url('images/panes/insight.jpg') 0 0 no-repeat;
+    margin: -5px;
+}
+
+.no-js #pane5:hover{
+    background: url('images/panes/insight.jpg') 0 -128px no-repeat;
+}
+
+#pane6{
+    background: url('images/panes/services.jpg')no-repeat;
+    margin: -5px -5px -5px 0;
+}
+#pane7{
+    background: url('images/panes/face.jpg')no-repeat;
+    margin: -5px 0;
+}
+#pane8{
+    margin: -5px -5px -5px 0;
+    background: url('images/panes/success.jpg') 0 0 no-repeat;
+}
+.no-js #pane8:hover{
+    background: url('images/panes/success.jpg') 0 -128px no-repeat;
+}
+#pane9{
+    margin: -5px -5px -5px 0;
+    background: url('images/panes/resources.jpg') 0 0 no-repeat;
+}
+.no-js #pane9:hover{
+    background: url('images/panes/resources.jpg') 0 -128px no-repeat;
+}
+
+#pane10{
+    margin: -5px -5px -5px 0;
+    background: url('images/panes/creative.jpg') 0 0 no-repeat;
+}
+.no-js #pane10:hover{
+    background: url('images/panes/creative.jpg') 0 -128px no-repeat;
+}
+
+
+
+
+
+
 body {
     width: 100%;
     margin: 0;
@@ -839,87 +934,7 @@ div.aligncenter {
 
 
 
-/*panels */
-#panels, #panels .pane {
-    border: 5px solid #000;
-}
 
-.pane{
-    float: left;
-    overflow: hidden;
-    display:block;
-}
-
-.single{height:128px;width:128px}
-.double{height:128px;width:261px;}
-.triple{height:128px;width:394px;}
-
-.panel-group{
-    width: 399px;
-    float:left;
-}
-
-#pane1{
-    background: url('images/panes/client-case-studies.jpg') no-repeat;
-    margin: -5px 0 0 -5px;
-}
-
-#pane2{
-    background: #EF8B1E;
-    width: 132px;
-    height: 261px;
-    margin: -5px;
-}
-
-#pane3{
-    background: url('images/panes/industries.jpg') no-repeat;
-    margin: -5px 0 0 0;
-}
-
-#pane4{
-    background: url('images/panes/ideas-b2b.jpg') 0 0 no-repeat;
-    margin: -5px -5px 0 -5px;
-}
-
-.no-js #pane4:hover{
-    background: url('images/panes/ideas-b2b.jpg') 0 -128px no-repeat;
-}
-
-#pane5{
-    background: url('images/panes/insight.jpg') 0 0 no-repeat;
-    margin: -5px;
-}
-
-.no-js #pane5:hover{
-    background: url('images/panes/insight.jpg') 0 -128px no-repeat;
-}
-
-#pane6{
-    background: url('images/panes/services.jpg')no-repeat;
-    margin: -5px -5px -5px 0;
-}
-#pane7{
-    background: url('images/panes/face.jpg')no-repeat;
-    margin: -5px 0;
-}
-#pane8{
-    margin: -5px -5px -5px 0;
-    background: url('images/panes/success.jpg') 0 0 no-repeat;
-}
-.no-js #pane8:hover{
-    background: url('images/panes/success.jpg') 0 -128px no-repeat;
-}
-#pane9{
-    margin: -5px -5px -5px 0;
-    background: url('images/panes/awards.jpg') no-repeat;
-}
-#pane10{
-    margin: -5px -5px -5px 0;
-    background: url('images/panes/creative.jpg') 0 0 no-repeat;
-}
-.no-js #pane10:hover{
-    background: url('images/panes/creative.jpg') 0 -128px no-repeat;
-}
 
 
 
@@ -1142,7 +1157,7 @@ form#newslettersignup br{
 #contact-col-1{
     float: left;
     width: 63px;
-    margin: 0 8px 0 0;
+    margin: 0 6px 0 0;
 }
 
 #contact-col-1 img.contact-profile{
@@ -1170,6 +1185,15 @@ form#newslettersignup br{
 }
 
 .search-text{
-    width: 145px;
+    width: 130px;
+}
+
+.widget_search{
+    padding: 9px;
+    border: 1px solid #0F5BA2;
+}
+
+.widget_search h2{
+    margin-top: 0;
 }
 
