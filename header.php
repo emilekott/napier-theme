@@ -14,7 +14,8 @@ if (is_front_page()) {
             echo wp_specialchars($s, 1);
         } else {
             wp_title('', true);
-            ?> &#8212; <?php bloginfo('name');
+   ?> &#8212; <?php
+            bloginfo('name');
         }
 ?></title>
 
@@ -53,8 +54,23 @@ if (is_front_page()) {
         </style>
         -->
 
-<?php if (is_singular()) wp_enqueue_script('comment-reply'); ?>	
+        <?php if (is_singular()) wp_enqueue_script('comment-reply'); ?>	
 <?php wp_enqueue_script("jquery"); ?>
+        <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-18787628-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+        </script>
+
+
 <?php wp_head(); ?>
 
     </head>
@@ -63,7 +79,7 @@ if (is_front_page()) {
             <div id="strap-header">
                 <div class="container_12">
                     <div class="grid_10 prefix_2 contact-header">
-                    <p><a href="mailto:info@napier.co.uk">info@napier.co.uk</a> | 0207 078 0849</p>
+                        <p><a href="mailto:info@napier.co.uk">info@napier.co.uk</a> | 0207 078 0849</p>
                     </div>
                 </div>
             </div>
@@ -79,7 +95,7 @@ if (is_front_page()) {
                     <div class="grid_7">
                         <div id="tag-line">
                             <div id="site-description"><?php bloginfo('description'); ?></div>
-                           <!-- <div id="telephone">0207 078 0849</div>-->
+                            <!-- <div id="telephone">0207 078 0849</div>-->
                         </div>
                     </div>
 
@@ -96,7 +112,7 @@ if (is_front_page()) {
             <div id="nav-wrapper">
                 <div class="container_12">
                     <div class="grid_12">
-<?php wp_nav_menu(array('theme_location' => 'nav', 'container_id' => 'nav')); ?>
+                        <?php wp_nav_menu(array('theme_location' => 'nav', 'container_id' => 'nav')); ?>
 <?php if (!is_front_page()) { ?><!--<div id="nav-shadow"></div>--><?php } ?>
                     </div>
 
@@ -105,13 +121,13 @@ if (is_front_page()) {
                 </div>
             </div>
             <div id="wrapper-container">
-            <div id="wrapper" class="container_12">
-                <?php
-                //add breadcrumbs to all but front page
-                if (!is_front_page()) {
-                    echo '<div class="grid_12">';
-                    if (function_exists('wordpress_breadcrumbs'))
-                        wordpress_breadcrumbs();
-                    echo '</div>';
-                }
-                ?>
+                <div id="wrapper" class="container_12">
+                    <?php
+                    //add breadcrumbs to all but front page
+                    if (!is_front_page()) {
+                        echo '<div class="grid_12">';
+                        if (function_exists('wordpress_breadcrumbs'))
+                            wordpress_breadcrumbs();
+                        echo '</div>';
+                    }
+                    ?>

@@ -41,14 +41,29 @@ add_action( 'wp_enqueue_scripts', 'panel_script' );
 
 
 //add first and last classes to menu
-function add_first_and_last($output) {
+/*function add_first_and_last($output) {
   $output = preg_replace('/class="menu-item/', 'class="first-menu-item menu-item', $output, 1);
   $output = substr_replace($output, 'class="last-menu-item menu-item', strripos($output, 'class="menu-item'), strlen('class="menu-item'));
   return $output;
 }
-add_filter('wp_nav_menu', 'add_first_and_last');
+add_filter('wp_nav_menu', 'add_first_and_last');*/
 
 
+
+function nav_menu_add_classes( $items, $args ) {
+    //Add first item class
+    $items[1]->classes[] = 'first-menu-item';
+
+    //Add last item class
+    $i = count($items);
+    while($items[$i]->menu_item_parent != 0 && $i > 0) {
+        $i--;
+    }
+    $items[$i]->classes[] = 'last-menu-item';
+
+    return $items;
+}
+add_filter( 'wp_nav_menu_objects', 'nav_menu_add_classes', 10, 2 );
 
 
 /*
