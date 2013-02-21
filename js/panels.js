@@ -8,9 +8,9 @@ $j(document).ready(function() {
 });
 
 hoverIn = function(){
-    $j(this).animate({backgroundPositionY: "-128px"},500);
+    $j(this).animate({backgroundPosition: '0 -128px'});
 }
 
 hoverOut = function(){
-    $j(this).animate({backgroundPositionY: "0"},500);
+    $j(this).animate({backgroundPosition: '0 0'});
 }

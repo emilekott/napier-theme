@@ -21,6 +21,7 @@ function sf_script()
     wp_register_script( 'hover-intent', get_template_directory_uri() . '/js/jquery.hoverintent.js' );
     wp_register_script( 'sf-script', get_template_directory_uri() . '/js/superfish.js' );
     wp_register_script( 'sf-call', get_template_directory_uri() . '/js/sf-call.js' );
+    
   
     // For either a plugin or a theme, you can then enqueue the script:  
     wp_enqueue_script( 'hover-intent' ); 
@@ -33,7 +34,9 @@ add_action( 'wp_enqueue_scripts', 'sf_script' );
 function panel_script()
 {
     if (is_front_page()){
+        wp_register_script( 'bg-pos', get_template_directory_uri() . '/js/jquery.backgroundpos.js' );
         wp_register_script( 'panels', get_template_directory_uri() . '/js/panels.js' );
+        wp_enqueue_script( 'bg-pos' );
         wp_enqueue_script( 'panels' );
     }
 }
