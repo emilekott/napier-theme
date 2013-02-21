@@ -353,7 +353,7 @@ ul#menu-main-menu li li{
 ul#menu-main-menu li a, ul#menu-main-menu li a:link, ul#menu-main-menuli a:visited {
     display: block;
     margin: 0px;
-    padding-left: 11px;
+    padding-left: 10px;
     text-align: center;
     text-decoration: none;
     -webkit-transition: color 0.4s, background-color 0.4s;
@@ -366,7 +366,7 @@ ul#menu-main-menu li a, ul#menu-main-menu li a:link, ul#menu-main-menuli a:visit
 
 ul#menu-main-menu li a::after {
 content: "|";
-margin-left: 11px;
+margin-left: 10px;
 }
 
 ul#menu-main-menu li.last-menu-item a::after, ul#menu-main-menu li li a::after{
@@ -1129,8 +1129,13 @@ form#newslettersignup br{
     margin-top: 0;
 }
 
+.YoutubeWidget p.description{
+    margin: 5px 0;
+}
+
 .YoutubeWidget p.widget-link{
     margin-bottom: 0;
+    margin-top: 5px;
 }
 
 .youtube-thumb{
