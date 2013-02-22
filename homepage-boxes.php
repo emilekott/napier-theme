@@ -55,8 +55,9 @@
         <div class="box-inner">
             <h2>Our Blogs</h2>
             <?php
+            
             $args = array(
-                'posts_per_page' => 4,
+                'posts_per_page' => 5,
                 'category_name' => "category_name=misc-marketing,napier-news,news-about-napier",
             );
             $the_query = new WP_Query($args);
@@ -64,7 +65,10 @@
 
             while ($the_query->have_posts()) :
                 $the_query->the_post();
-                echo '<li><a href="' . get_permalink(get_the_ID()) . '">' . get_the_title() . '</a></li>';
+                $title =get_the_title();
+                $title = (strlen($title) > 40) ? substr($title,0,43).'...' : $title;
+                
+                echo '<li><a href="' . get_permalink(get_the_ID()) . '">' . $title . '</a></li>';
             endwhile;
 
 

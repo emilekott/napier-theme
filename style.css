@@ -1200,7 +1200,8 @@ form#newslettersignup br{
 }
 
 .search-text{
-    width: 130px;
+    width: 120px;
+    float:left;
 }
 
 .widget_search{
