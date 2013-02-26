@@ -55,7 +55,7 @@ if (is_front_page()) {
         -->
 
         <?php if (is_singular()) wp_enqueue_script('comment-reply'); ?>	
-<?php wp_enqueue_script("jquery"); ?>
+        <?php wp_enqueue_script("jquery"); ?>
         <script type="text/javascript">
 
             var _gaq = _gaq || [];
@@ -71,10 +71,16 @@ if (is_front_page()) {
         </script>
 
 
-<?php wp_head(); ?>
+
+        <?php wp_head(); ?>
 
     </head>
     <body>
+        <!-- ClickTale Top part -->
+        <script type="text/javascript">
+            var WRInitTime=(new Date()).getTime();
+        </script>
+        <!-- ClickTale end of Top part -->
         <div id="page" <?php echo (is_front_page()) ? 'class="home"' : 'class="not-home"' ?>>
             <div id="strap-header">
                 <div class="container_12">
@@ -113,7 +119,7 @@ if (is_front_page()) {
                 <div class="container_12">
                     <div class="grid_12">
                         <?php wp_nav_menu(array('theme_location' => 'nav', 'container_id' => 'nav')); ?>
-<?php if (!is_front_page()) { ?><!--<div id="nav-shadow"></div>--><?php } ?>
+                        <?php if (!is_front_page()) { ?><!--<div id="nav-shadow"></div>--><?php } ?>
                     </div>
 
                     <div class="clear"></div>
